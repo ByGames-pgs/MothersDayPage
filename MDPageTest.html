@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjeta para Mamá</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      max-width: 400px;
+      display: none;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 1.2em;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #d81b60;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Tarjeta para mi Mamá 💖</h1>
+  <button class="btn" id="toggleButton" onclick="toggleTarjeta()">Abrir</button>
+
+  <div class="card" id="tarjeta">
+    <h2>Feliz Dia Mamá!</h2>
+    <p>Gracias Mamá por acompañarme en todo mi camino, cuidarme, ayudarme y sobre todo amarme. Gracias por ser mi Mamá 💖</p>
+    <hr>
+    <p>PD: Perdón por hacerte esto el domingo es que juraba que ese día era el dia de la madre 😅</p>
+  </div>
+
+  <script>
+    const tarjeta = document.getElementById('tarjeta');
+    const toggleButton = document.getElementById('toggleButton');
+
+    function toggleTarjeta() {
+      if (tarjeta.style.display === 'block') {
+        tarjeta.style.display = 'none';
+        toggleButton.textContent = 'Abrir';
+      } else {
+        tarjeta.style.display = 'block';
+        toggleButton.textContent = 'Cerrar';
+      }
+    }
+  </script>
+
+</body>
+</html>
